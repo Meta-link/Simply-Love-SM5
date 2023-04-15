@@ -115,6 +115,14 @@ Branch.AfterSelectPlayMode = function()
 	return SelectMusicOrCourse()
 end
 
+Branch.AllowScreenMarathon = function()
+	if ThemePrefs.Get("AllowScreenMarathon") then
+		return "ScreenSelectPlayMode2"
+	else
+		return Branch.AfterSelectPlayMode()
+	end
+end
+
 
 Branch.AfterGameplay = function()
 	if THEME:GetMetric("ScreenHeartEntry", "HeartEntryEnabled") then
