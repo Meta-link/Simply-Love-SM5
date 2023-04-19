@@ -118,9 +118,9 @@ end
 Branch.AllowScreenMarathon = function()
 	if ThemePrefs.Get("AllowScreenMarathon") then
 		return "ScreenSelectPlayMode2"
-	else
-		return Branch.AfterSelectPlayMode()
 	end
+	
+	return Branch.AfterSelectPlayMode()
 end
 
 
